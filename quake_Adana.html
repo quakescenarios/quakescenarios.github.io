@@ -92,6 +92,24 @@ function goFunc()
 
 <h2>Turkey Earthquake Project</h2>
 
+This page considers the potential impacts of an earthquake in the Adana province, centered at 37.55'N and 35.37'E.
+<br>
+<h5>Of a Magnitude 6.5 Earthquake:</h5>
+&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_65_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_65_Adana.png"  width="350" height="250" /> <br>
+<br>
+<h5>Of a Magnitude 7.0 Earthquake:</h5>
+&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_70_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_70_Adana.png"  width="350" height="250" /> <br>
+<br>
+<h5>Of a Magnitude 7.5 Earthquake:</h5>
+&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_75_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_75_Adana.png"  width="350" height="250" /> <br>
+<br>
+<br>
+To download a daset of Modified Mercali Intensity and Peak Ground Velocity by location, see the following  <a href="https://quakescenarios.github.io/earthquake_simulation_Adana.csv"> Results Page</a>.
+<br>
+<br>
+To see more about the calculation of the figures presented in the page, see the <a href="https://quakescenarios.github.io/earthquake_documentation.html"> Documentation Page</a>.
+
+<br>
 
 <script>
 function autocomplete(inp, arr) {
@@ -196,27 +214,6 @@ var countries = ["Adana", "Adiyaman", "Afyonkarahisar", "Agri", "Aksaray", "Amas
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
-</script>
-
-This page considers the potential impacts of an earthquake in the Adana province, centered at 37.55'N and 35.37'E.
-<br>
-<h5>Of a Magnitude 6.5 Earthquake:</h5>
-&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_65_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_65_Adana.png"  width="350" height="250" /> <br>
-<br>
-<h5>Of a Magnitude 7.0 Earthquake:</h5>
-&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_70_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_70_Adana.png"  width="350" height="250" /> <br>
-<br>
-<h5>Of a Magnitude 7.5 Earthquake:</h5>
-&nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_75_Adana.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_75_Adana.png"  width="350" height="250" /> <br>
-<br>
-<br>
-To download a daset of Modified Mercali Intensity and Peak Ground Velocity by location, see the following  <a href="https://quakescenarios.github.io/earthquake_simulation_Adana.csv"> Results Page</a>.
-<br>
-<br>
-To see more about the calculation of the figures presented in the page, see the <a href="https://quakescenarios.github.io/earthquake_documentation.html"> Documentation Page</a>.
-
-<br>
-
 
 <p> To explore a different earthquake, enter a town (ilçe) in Istanbul or a province, here:
 
@@ -224,11 +221,13 @@ To see more about the calculation of the figures presented in the page, see the 
 <form autocomplete="off" target="_blank" action="https://quakescenarios.github.io/quake_" method="POST">
   <div class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" name="MyLoc" placeholder="Location"  >
+    <option value="https://quakescenarios.github.io/quake_Amasya.html"> </option>  
+    <option value="https://quakescenarios.github.io/quake_Bursa.html"> </option>  
     </input>	
   </div>
   <input onclick="goFunc()" type="submit"  >
 </form>
 </p>
-
+</script>
 </body>
 </html>
