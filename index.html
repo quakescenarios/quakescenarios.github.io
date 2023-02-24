@@ -92,6 +92,27 @@ function goFunc()
 
 <h2>Turkey Earthquake Project</h2>
 
+This page considers the potential impacts of earthquakes in Turkey. 
+<br>
+<br>
+To learn about the calculations involved in this project, see the <a href="https://quakescenarios.github.io/earthquake_documentation.html"> Documentation Page</a>.
+<br>
+<br>
+To begin, enter a town (ilçe) in Istanbul or a province:
+<br>
+<br>
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" target="_blank" action="https://quakescenarios.github.io/quake_" method="POST">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="MyLoc" placeholder="Location"  >
+    <option value="https://quakescenarios.github.io/quake_Amasya.html"> </option>  
+    <option value="https://quakescenarios.github.io/quake_Bursa.html"> </option>  
+    </input>	
+  </div>
+  <input onclick="goFunc()" type="submit"  >
+</form>
+
+
 <script>
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
@@ -196,24 +217,6 @@ var countries = ["Adana", "Adiyaman", "Afyonkarahisar", "Agri", "Aksaray", "Amas
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
 </script>
-
-This page considers the potential impacts of earthquakes in Turkey. To begin, enter a town (ilçe) in Istanbul or a province:
-
-<!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" target="_blank" action="https://quakescenarios.github.io/quake_" method="POST">
-  <div class="autocomplete" style="width:300px;">
-    <input id="myInput" type="text" name="MyLoc" placeholder="Location"  >
-    <option value="https://quakescenarios.github.io/quake_Amasya.html"> </option>  
-    <option value="https://quakescenarios.github.io/quake_Bursa.html"> </option>  
-    </input>	
-  </div>
-  <input onclick="goFunc()" type="submit"  >
-</form>
-
-<br>
-<br>
-To see more about the calculation of the nubmers presented in the page, see the <a href="https://quakescenarios.github.io/earthquake_documentation.html"> Documentation Page</a>.
-<br>
 
 </body>
 </html>
