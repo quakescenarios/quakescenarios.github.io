@@ -95,13 +95,15 @@ To begin, enter a town (ilçe) in Istanbul or a province:
 <br>
 <br>
 <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" target="_blank" method="POST">
+<div style="display:flex;">
+  <form autocomplete="off" target="_blank" method="POST">
   <span class="autocomplete" style="width:300px;">
     <input id="myInput" type="text" placeholder="Location"  >	
   </span>
 </form>
 <input onclick="changeFunc()" type="submit"  >
-
+</div>
+  
 <script>
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
