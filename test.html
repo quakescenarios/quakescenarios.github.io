@@ -1,6 +1,6 @@
-<HTML>
-<HEAD>
-
+<!DOCTYPE html>
+<html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -68,18 +68,20 @@ input[type=submit] {
 
 <script language="javascript" type="text/javascript">
 
-function goFunc()
+function changeFunc()
 {
-   var tmp1 = "https://quakescenarios.github.io/quake_";  
-   tmp1 +=  document.getElementById("myinput").value;
-   tmp1 += ".html";  
-   window.location =  tmp1;
+   var tmp = "https://quakescenarios.github.io/quake_";  
+   tmp	+= document.getElementById("myInput").value;
+   tmp += ".html";
+   window.location = tmp;
 }
 
 </SCRIPT>
-</HEAD>
 
-<BODY>
+
+</head>     
+
+<body>
 
 <h2>Turkey Earthquake Project</h2>
 
@@ -93,14 +95,13 @@ To begin, enter a town (ilçe) in Istanbul or a province:
 <br>
 <br>
 <!--Make sure the form has the autocomplete function switched off:-->
-  
-<form autocomplete="off" target="_blank" method="POST" >
-<div class="autocomplete" style="width:300px;">
-<input type="text" id="myinput" placeholder="Location"></input>
-</div>
+<form autocomplete="off" target="_blank" method="POST">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" placeholder="Location"  >	
+  </div>
 </form>
-<input onclick="goFunc()" type="submit"  >
-  
+<input onclick="changeFunc()" type="submit"  >
+
 <script>
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
@@ -206,5 +207,5 @@ var countries = ["Adana", "Adiyaman", "Afyonkarahisar", "Agri", "Aksaray", "Amas
 autocomplete(document.getElementById("myInput"), countries);
 </script>
 
-</BODY>
-</HTML>
+</body>
+</html>
