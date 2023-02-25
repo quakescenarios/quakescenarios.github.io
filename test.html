@@ -3,18 +3,11 @@
 
 <script language="javascript" type="text/javascript">
 
-function changeFunc()
-{
-   var tmp =  document.getElementById("myList").value;
-   window.location = tmp;
-}
-
-
 function goFunc()
 {
-   var tmp1 = "http://www.example.com/check/";  
+   var tmp1 = "https://quakescenarios.github.io/quake_";  
    tmp1 +=  document.getElementById("myinput").value;
-
+   tmp1 += ".html";  
    window.location =  tmp1;
 }
 
@@ -25,17 +18,8 @@ function goFunc()
 
 <BODY>
 
-<form>
-<select id='myList' onchange='changeFunc()'>
-  <option value="default">Default</option>
-  <option value="http://cnn.com">CNN</option>
-  <option value="http://www.foxnews.com">Fox News</option>  
-</select>
-</form>
-
 
 <form>
-
 <input type="text" id="myinput"></input>
 </form>
 <button onclick="goFunc()">Go!</button>
