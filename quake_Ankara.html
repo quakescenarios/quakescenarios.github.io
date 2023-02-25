@@ -72,17 +72,10 @@ input[type=submit] {
 
 function changeFunc()
 {
-   var tmp =  document.getElementById("myInput").value;
+   var tmp = "https://quakescenarios.github.io/quake_";  
+   tmp  += document.getElementById("myInput").value;
+   tmp += ".html";
    window.location = tmp;
-}
-
-
-function goFunc()
-{
-   var tmp1 = "https://quakescenarios.github.io/quake_";  
-   tmp1 +=  document.getElementById("myInput").value;
-   tmp1 += ".html";
-   window.location =  tmp1;
 }
 
 </SCRIPT>
@@ -106,7 +99,7 @@ This page considers the potential impacts of an earthquake in the Ankara provinc
 &nbsp; &nbsp; <img src="https://quakescenarios.github.io/national_mag_75_Ankara.png"  width="350" height="250" /> &nbsp; <img src="https://quakescenarios.github.io/zoom_mag_75_Ankara.png"  width="350" height="250" /> <br>
 <br>
 <br>
-To download a dataset of Modified Mercali Intensity and Peak Ground Velocity by location, see the following  <a href="https://quakescenarios.github.io/earthquake_simulation_Ankara.csv"> Results Page</a>.
+To download a dataset of Modified Mercalli Intensity and Peak Ground Velocity by location, see the following  <a href="https://quakescenarios.github.io/earthquake_simulation_Ankara.csv"> Results Page</a>.
 <br>
 <br>
 To see more about the calculation of the figures presented in the page, see the <a href="https://quakescenarios.github.io/earthquake_documentation.html"> Documentation Page</a>.
@@ -116,16 +109,14 @@ To explore a different earthquake, enter a town (ilçe) in Istanbul or a provinc
 <br>
 <br>
 <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" target="_blank" action="https://quakescenarios.github.io/quake_" method="POST">
-  <div class="autocomplete" style="width:300px;">
-    <input id="myInput" type="text" name="MyLoc" placeholder="Location"  >
-    <option value="https://quakescenarios.github.io/quake_Amasya.html"> </option>  
-    <option value="https://quakescenarios.github.io/quake_Bursa.html"> </option>  
-    </input>	
-  </div>
-  <input onclick="goFunc()" type="submit"  >
+<div style="display:flex;">
+  <form autocomplete="off" target="_blank" method="POST">
+  <span class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" placeholder="Location"  >   
+  </span>
 </form>
-
+<input onclick="changeFunc()" type="submit"  >
+</div>
 
 <script>
 function autocomplete(inp, arr) {
