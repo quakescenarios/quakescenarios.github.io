@@ -26,11 +26,11 @@ body {
 <p>
 <h3>Summary</h3>
 This page summarizes our calculations in estimating the impact of earthquakes on different locations within Turkey. To return to the homepage of this project, click <a href="https://quakescenarios.github.io"> here</a>.
-<h3>Computation of PGV and MMI</h3>
+<h3>Computation of Peak Ground Velocity and Modified Mercalli Intensity</h3>
 <p>
 We draw on Akkar and Bommer (2010) to relate peak ground velocity (PGV) to earthquake magnitude, distance, with adjustments for soil conditions and the type-of-fault. According to Equation (3) of their paper: 
 \begin{align}
-\log_{10}(PGV) = b_0+b_1 M+b_2 M^2+(b_3+b_4 M)\log_{10} \sqrt{R_{jb}^2+b_5^2} \\ <br>
+\log_{10}(PGV) = b_0+b_1 M+b_2 M^2+\\ <br>(b_3+b_4 M)\log_{10} \sqrt{R_{jb}^2+b_5^2} \\ <br>
 +b_6 S_S + b_7 S_A +b_8 F_N + b_9 F_R 
 \end{align}
 In this equation, \(M \) refers to the magnitude of the earthquake; \( R_{jb} \) to the (Joyce-Boyner) distance (in kilometers) between the earthquake epicenter and the location at which the peak ground velocity is being computed; \( S_S \) and \( S_A \) are, respectively, indicator variables equal to one if the location has soft or stiff soil conditions. Finally, \( F_N \) and \( F_R \) are, respectively, indicator variables characterizing whether the earthquake fault is normal or reverse. Note, this equation describes the central tendency of peak ground velocity felt in different locations; there is considerable dispersion (both within and across earthquakes) that one can characterize, which we abstract from for now. 
