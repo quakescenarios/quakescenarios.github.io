@@ -4,14 +4,14 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>MathJax example</title>
+  <title>Documentation Page</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 <style>
 div {
-  max-width: 600px;
+  max-width: 550px;
   min-width: 100px;
 }
 body {
@@ -25,7 +25,7 @@ body {
 <div class="content">
 <p>
 <h3>Summary</h3>
-This page summarizes our calculations in estimating the impact of earthquakes on different locations within Turkey. To return to the homepage of this project, click <a href="https://quakescenarios.github.io"> here</a>.
+This page summarizes our calculations in estimating the impact of earthquakes on different locations within Turkey. To return to the homepage of this project, click <a href="https://quakescenarios.github.io"> here</a>. </p>
 <h3>Computation of Peak Ground Velocity and Modified Mercalli Intensity</h3>
 <p>
 We draw on Akkar and Bommer (2010) to relate peak ground velocity (PGV) to earthquake magnitude, distance, with adjustments for soil conditions and the type-of-fault. According to Equation (3) of their paper: 
@@ -67,15 +67,19 @@ Akkar and Bommer estimate ground motion prediction equations (GMPEs) from data c
 <td style="text-align:center"> 0.01305 </td>
   </tr>
 </table>
-<br>
-<br
-[[DESCRIBE VALUES OF F's AND S's]]
-<br>
-<br>
-[[DESCRIBE COMPUTATION OF MMI]]
+</p>
+
+<p> Applying the above equation requires values for \( S_S \), \( S_A \), \( F_R \) and \( F_N \). From the USGS, we retrieve the "<a href="https://www.sciencebase.gov/catalog/item/5d815a9ae4b0c4f70d0586c8">Global VS30 Map</a>". This map contains the time-averaged shear-wave velocity \(V_{s,30} \)  in the upper 30 meters at different locations. Following Akkar and Bommer, among others, we set \( S_S =1 \) if \(V_{s,30}<360 m/s \) and \( S_A =1 \) if \( V_{s,30} \) is between \(<360 m/s \) and \(<750 m/s \).
+ In Turkey, the two main faults &#8212; the Northen Anatolian and Eastern Anatolian faults &#8212; are both strike-slip faults. For these, 
+</p> 
+<p> Having computed an earthquake's peak groun velocity by location, we apply the formula estimated by Atkinson and Kaka (2006), relating felt intensity to peak ground velocity: 
+\[ MMI = 4.40 + 1.92 \log_{10}(PGV)  + 0.280 (\log_{10}(PGV) )^2 \].
+</p>
 
 <h3>References</h3>
-Akkar, Sinan and Julian J. Bommer. 2010. "Empirical Equations for the Prediction of PGA, PGV, and Spectral Accelerations in Europe, the Mediterranean Region, and the Middle East,'' <i>Seismological Research Letters</i>, 81(2): 195-206. 
-</div>
+<ol>
+<li>Akkar, Sinan and Julian J. Bommer. 2010. "Empirical Equations for the Prediction of PGA, PGV, and Spectral Accelerations in Europe, the Mediterranean Region, and the Middle East," <i>Seismological Research Letters</i>, 81(2): 195-206. </li>
+<li>Atkinson, Gail M. and SanLinn I. Kaka. 2006. "Relationships Between Felt Intensity and Instrumental Ground Motion for New Madrid Shakemaps." <a href= https://earthquake.usgs.gov/cfusion/external_grants/reports/05HQGR0039.pdf>Link.</a> </li>
+</ol>
 </body>
 </html>
