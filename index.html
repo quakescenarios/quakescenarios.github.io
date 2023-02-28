@@ -70,18 +70,12 @@ input[type=submit] {
 
 function changeFunc()
 {
-   var tmp =  document.getElementById("myInput").value;
+   var tmp = "https://quakescenarios.github.io/quake_";  
+   tmp	+= document.getElementById("myInput").value;
+   tmp += ".html";
    window.location = tmp;
 }
 
-
-function goFunc()
-{
-   var tmp1 = "https://quakescenarios.github.io/quake_";  
-   tmp1 +=  document.getElementById("myInput").value;
-   tmp1 += ".html";
-   window.location =  tmp1;
-}
 
 </SCRIPT>
 
@@ -105,15 +99,14 @@ To begin, enter a town (ilçe) in Istanbul or a province:
 <br>
 <br>
 <!--Make sure the form has the autocomplete function switched off:-->
-<form autocomplete="off" target="_blank" action="https://quakescenarios.github.io/quake_" method="POST">
-  <div class="autocomplete" style="width:300px;">
-    <input id="myInput" type="text" name="MyLoc" placeholder="Location"  >
-    <option value="https://quakescenarios.github.io/quake_Amasya.html"> </option>  
-    <option value="https://quakescenarios.github.io/quake_Bursa.html"> </option>  
-    </input>	
-  </div>
-  <input onclick="goFunc()" type="submit"  >
+<div style="display:flex;">
+  <form autocomplete="off" target="_blank" method="POST">
+  <span class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" placeholder="Location"  >	
+  </span>
 </form>
+<input onclick="changeFunc()" type="submit"  >
+</div>
 
 
 <script>
